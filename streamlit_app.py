@@ -10,8 +10,6 @@ from pathlib import Path
 
 import streamlit as st
 
-REPO_URL = "https://github.com/AiroGriefwind/The-Daily-Ten"
-
 # 柴、米、油、盐、酱、醋、茶、糖、酒、辣椒（与文稿标题用字一致：盐/酱 等）
 ASSET_ORDER: list[tuple[str, str]] = [
     ("chai-firewood.md", "柴"),
@@ -84,19 +82,14 @@ def main() -> None:
     )
 
     st.title("开门十件事")
-    st.caption("供同事在线浏览：口播文案与历史事实验证对照")
 
-    col_top1, col_top2 = st.columns([2, 1])
-    with col_top1:
-        labels = [f"{label}（{fn}）" for fn, label in ASSET_ORDER]
-        choice_idx = st.selectbox(
-            "筛选：选择一篇",
-            range(len(ASSET_ORDER)),
-            format_func=lambda i: labels[i],
-            key="article_pick",
-        )
-    with col_top2:
-        st.markdown(f"[GitHub 仓库（The-Daily-Ten）]({REPO_URL})")
+    labels = [f"{label}（{fn}）" for fn, label in ASSET_ORDER]
+    choice_idx = st.selectbox(
+        "筛选：选择一篇",
+        range(len(ASSET_ORDER)),
+        format_func=lambda i: labels[i],
+        key="article_pick",
+    )
 
     filename, short = ASSET_ORDER[choice_idx]
     copy_md, hist_md = load_article(filename)

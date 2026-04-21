@@ -4,6 +4,16 @@
 
 ---
 
+## 2026-04-21（自 `3b9c79b` 以来）
+
+### 已完成
+
+- Streamlit 页：移除副标题说明「供同事在线浏览：口播文案与历史事实验证对照」。
+- Streamlit 页：移除顶部「GitHub 仓库（The-Daily-Ten）」链接区块；筛选器单独占满顶栏区域。
+- **`docs/governance/PRD.MD`**：同步删除「页面须展示 GitHub 仓库入口」的产品要求，避免与实现不一致。
+
+---
+
 ## 2026-04-21（自 `ec23b47` initialzing repo 以来）
 
 ### 已完成
@@ -11,7 +21,6 @@
 - 新增 **Streamlit** 应用 `streamlit_app.py`：按「柴→米→油→盐→酱→醋→茶→糖→酒→辣椒」顺序加载 `docs/assets` 下十篇 `.md`。
 - 首页 **筛选器**（`selectbox`）切换篇章；主区 **双栏**：左「文案」、右「历史事实验证」；以文稿中的 `## 歷史事實` 为分界解析。
 - 历史区块对 **裸露 http(s) URL** 做自动链转写，与已有 Markdown 链接并存，保证可点击。
-- 页面提供可点击的 **GitHub 仓库** 链接：[The-Daily-Ten](https://github.com/AiroGriefwind/The-Daily-Ten)。
 - 新增 `requirements.txt`（声明 `streamlit` 依赖）。
 - 撰写 **`docs/governance/PRD.MD`**（需求总览）并建立本 **`PROGRESS.MD`** 的首条进度。
 
