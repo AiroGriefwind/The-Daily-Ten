@@ -18,3 +18,7 @@
 ### 后续 / 部署
 
 - 若要公网访问，需将仓库部署到 Streamlit Cloud（或同类托管），入口指定 `streamlit_app.py`，并安装 `requirements.txt` 中的依赖。
+
+### 同次迭代补充
+
+- 添加根目录 `.gitignore`（忽略 `__pycache__` 等），避免本地运行 Streamlit 时产生缓存文件被误提交。
