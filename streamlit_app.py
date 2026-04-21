@@ -91,7 +91,7 @@ def main() -> None:
         key="article_pick",
     )
 
-    filename, short = ASSET_ORDER[choice_idx]
+    filename, _ = ASSET_ORDER[choice_idx]
     copy_md, hist_md = load_article(filename)
 
     st.divider()
